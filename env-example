@@ -1,0 +1,4 @@
+DATABASE_URL=postgresql://bewear:123456@localhost:5432/bewear
+POSTGRES_USER=bewear
+POSTGRES_PASSWORD=123456
+POSTGRES_DB=bewear
