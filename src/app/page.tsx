@@ -1,6 +1,7 @@
 import { desc } from "drizzle-orm";
 import Image from "next/image";
 
+import { Header } from "@/components/common/header";
 // import CategorySelector from "@/components/common/category-selector";
 // import Footer from "@/components/common/footer";
 // import { Header } from "@/components/common/header";
@@ -24,7 +25,7 @@ const Home = async () => {
 
   return (
     <>
-      {/* <Header /> */}
+      <Header />
       <div className="space-y-6">
         <div className="px-5">
           <Image
