@@ -28,7 +28,7 @@ import { useUpdateCartShippingAddress } from "@/hooks/mutations/use-update-cart-
 import { useCart } from "@/hooks/queries/use-cart";
 import { useUserAddresses } from "@/hooks/queries/use-user-addresses";
 
-import { formatAddress } from "../../helpers/address";
+import { formatAddress } from "../helpers/address";
 
 const formSchema = z.object({
   email: z.email("E-mail inválido"),
