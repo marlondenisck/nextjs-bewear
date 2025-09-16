@@ -6,8 +6,6 @@ import Stripe from "stripe";
 
 import { db } from "@/db";
 import {
-  cartItemTable,
-  cartTable,
   orderItemTable,
   orderTable,
 } from "@/db/schema";
@@ -23,6 +21,9 @@ export const createCheckoutSession = async (
 ) => {
   if (!process.env.STRIPE_SECRET_KEY) {
     throw new Error("Stripe secret key is not set");
+  }
+  if (!process.env.NEXT_PUBLIC_APP_URL) {
+    throw new Error("NEXT_PUBLIC_APP_URL is not set");
   }
   const session = await auth.api.getSession({
     headers: await headers(),

@@ -16,3 +16,17 @@
 - Autorize os origens JavaScript: `http://localhost:3000`
 - Adicione os URIs de redirecionamento autorizados: `http://localhost:3000/api/auth/callback/google`
 - Copie o ID do cliente e o segredo do cliente para os próximos passos
+
+
+## Stripe
+- Crie uma conta no Stripe
+- No dashboard do Stripe, vá em "Developers" > "API Keys"
+- Copie a "Publishable key" e a "Secret key" para os próximos passos
+- Vá em "Developers" > "Webhooks"
+- Clique em "Teste ouvinte local"
+- Siga as instruções para instalar o Stripe CLI
+- Após instalar, rode o comando abaixo para iniciar o webhook listener:
+  ```bash
+  stripe listen --forward-to localhost:3000/api/webhooks/stripe
+  ```
+- Copie o "Signing secret" do retorno da chamada ao webhook e adicione no seu env
